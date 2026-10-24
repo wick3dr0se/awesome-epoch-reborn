@@ -34,7 +34,7 @@ Official chat runs on [Fluxer](https://chat.project-epoch.org), not Discord. The
 
 Use a clean enUS 3.3.5a client (build 12340). Epoch does not distribute it, but the client the original team published is on their CDN: [3.3.5-enUS-minified.zip](https://epoch-cdn.com/client/3.3.5-enUS-minified.zip), a trimmed client at ~12 GB. If that link ever dies, [ChromieCraft's downloads](https://chromiecraft.com/en/downloads/) serve the same build, though the original is the one to prefer. Budget around 20 GB once Epoch's patches land on top.
 
-Extract it into a folder you own, then point the [official launcher](https://project-epoch.org/how-to-connect.html) at the folder holding `Wow.exe`, press Update, wait for the patches to verify, then press Play. Connection setup is built into the launcher: no access key, no editing `realmlist.wtf`.
+Extract it into a folder you own, then point the [official launcher](https://project-epoch.org/how-to-connect.html) (if you have connection issues see: [notes](#notes)) at the folder holding `Wow.exe`, press Update, wait for the patches to verify, then press Play. Connection setup is built into the launcher: no access key, no editing `realmlist.wtf`.
 
 - Windows 10/11: extract the ZIP and run `ProjectEpochLauncher.exe`. SmartScreen may warn you the first time because the exe is unsigned, click More info then Run anyway.
 - **Linux:** two ways in. Run the launcher natively, extract the Linux archive and start `epoch-launcher`, or add the Windows `ProjectEpochLauncher.exe` to Steam as a Non-Steam Game and force Proton Experimental on it in its compatibility settings, then launch it from Steam. Either way, point the launcher at your extracted client folder and pick the Wine or Proton build you want in the launcher's Proton/Wine setup (the sliders icon, top right). The site labels the native launcher a preview build, so if it gives you trouble, fall back to the Steam route.
@@ -139,6 +139,7 @@ Found something missing or wrong here? Open a pull request or an issue.
 
 ## Notes
 
+- Disconnects, lag or a connection that never goes through: try Cloudflare WARP or another free VPN, which can fix or improve the routing. More in the [Connection/DC/Ping Issues?](https://project-epoch.org/forums/?topic=66) thread.
 - The project does not distribute the game client and nothing legitimate ever needs your password except the site and client; no GM will ask for it in Fluxer or a DM.
 - Back up your client before applying MPQ patches or injecting DLLs. The launcher re-downloads anything it manages, but it will not undo your own additions.
 - Epoch ships its own `PATCH-D` and `PATCH-M`. HD asset packs that used those letters have to be renamed, EpochAuthenticHD moved its files up a letter (D→E, E→F, F→G, M→N) for exactly this reason.
