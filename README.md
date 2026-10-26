@@ -93,9 +93,10 @@ Optional patches and tools that change the client itself rather than adding to i
 - [EpochAuthenticHD](https://github.com/thierbig/EpochAuthenticHD) – upscaled textures, HD models, trees, skyboxes, 4K maps, sounds and music, plus a Cataclysm water patch (`PATCH-W`) and an optional fog mod. MPQs go in `Data/`, icons in `Interface/`; skip the icon pack for more FPS and delete `PATCH-E` for the original character models. Its DXVK section is a separate optional step for Vulkan, not part of the pack.
 - [Patch-N_Epoch-Reborn](https://github.com/Kindrack/Patch-N_Epoch-Reborn) – map data for dungeon entrances, caverns and mines
 
-### Injector
+### Client features
 
-- [AwesomeEpoch](https://github.com/thierbig/AwesomeEpoch) – injects into the client to add modern features: stance and form dancing, the modern interaction button, `[@cursor]` macros, camera collision with translucent obstruction fading, extra unit queries and a nameplate API WeakAuras can anchor spells and castbars to. Update through the launcher first, then run the game through this.
+- [Awesome WotLK](https://github.com/noname08662/awesome_wotlk) – the actively developed successor: MSDF vector fonts, `[@cursor]` and `[@playerlocation]` macros, camera FOV, nameplates out to 200 yards with a `C_NamePlate` API that lets WeakAuras anchor spells and castbars, one-key smart interaction that loots, skins and uses what's in front of you, TTS, `/fcapture`, and `-login` auto-login. Extract the release into your client folder and run `AwesomeWotlkPatch.exe` once to patch `Wow.exe`.
+- [AwesomeEpoch](https://github.com/thierbig/AwesomeEpoch) – a fork of the same original codebase that injects at runtime instead of patching the exe, with anti-detection modules, the stance and form dancing that the successor dropped (swap stance and cast in the same click) and a modern interaction button, less actively developed.
 
 ### Renderers
 
