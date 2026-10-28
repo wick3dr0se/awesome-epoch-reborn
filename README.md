@@ -101,10 +101,11 @@ Optional patches and tools that change the client itself rather than adding to i
 
 ### Renderers
 
-Both modify water, fog and lighting through different rendering approaches. They're alternatives, not meant to be used together. Both originated as Ascension-client projects but have been community-verified working on Reborn. They also overlap visually with EpochAuthenticHD's water patch, which replaces MPQ assets rather than injecting a renderer.
+Three ways to replace the client's rendering, none of them meant to be combined. The first two originated as Ascension-client projects but have been community-verified working on Reborn. They also overlap visually with EpochAuthenticHD's water patch, which replaces MPQ assets rather than injecting a renderer.
 
 - [Modern WoW Renderer](https://github.com/Corfirean/modern-wow-renderer) – a 32-bit `d3d9.dll` proxy: lighting, volumetric fog, weather, water, post-processing.
 - [CoAVolFog](https://github.com/jealous-sound/coa-vfog) – a `version.dll` proxy: volumetric fog, god rays, water with wave simulation. It hooks the D3D9 call instead of replacing the DLL, with a documented Linux route.
+- [Northlight](https://github.com/lepola/northlight) – a full relight: sun and moon shadows, ray-traced GI, SSAO, volumetric fog with light shafts, and lamps that light their surroundings. A `frd9.dll` proxy plus a `patch-z` art layer built from your own light tables; Epoch's patches stop at Y, so nothing needs renaming and EpochAuthenticHD's letters stay put. MIT and a clean uninstall, but it wants 8 GB of RAM and builds a world cache per instance group, and its Linux package is untested in game.
 
 ### Making your own
 
