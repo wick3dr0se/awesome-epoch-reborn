@@ -13,7 +13,7 @@ The community-run continuation of Project Epoch, a custom Classic+ server on the
 - [Community](#community)
 - [Tools](#tools)
 - [Contributing](#contributing)
-- [Notes](#notes)
+- [Troubleshooting](#troubleshooting)
 
 ## Official
 
@@ -33,7 +33,7 @@ Official chat runs on [Fluxer](https://chat.project-epoch.org), not Discord. The
 
 Use a clean enUS 3.3.5a client (build 12340). Epoch does not distribute it, but the original team's trimmed client (~12 GB) is still on their CDN: [3.3.5-enUS-minified.zip](https://epoch-cdn.com/client/3.3.5-enUS-minified.zip). If that ever dies, [ChromieCraft's downloads](https://chromiecraft.com/en/downloads/) serve the same build. Budget about 20 GB with Epoch's patches on top.
 
-Extract it into a folder you own, then point the [official launcher](https://project-epoch.org/how-to-connect.html) (connection issues? see [Notes](#notes)) at the folder holding `Wow.exe`, press Update, then Play. Connection setup is built in: no access key, no editing `realmlist.wtf`.
+Extract it into a folder you own, then point the [official launcher](https://project-epoch.org/how-to-connect.html) (connection issues? see [Troubleshooting](#troubleshooting)) at the folder holding `Wow.exe`, press Update, then Play. Connection setup is built in: no access key, no editing `realmlist.wtf`.
 
 - **Windows 10/11**: run `ProjectEpochLauncher.exe`. SmartScreen may warn because the exe is unsigned: More info, then Run anyway.
 - **Linux**: run the Windows launcher through Steam with Proton (Experimental is personally tested and working), use another Wine frontend such as Lutris or Bottles or run the native Linux launcher (`epoch-launcher`), which the site labels a preview build. Either way, point the launcher at your extracted client folder.
@@ -120,6 +120,8 @@ Three ways to replace the client's rendering, none of them meant to be combined.
 - Creators posting Epoch content at launch: [SLiMOFI](https://www.youtube.com/@SLiMOFI), [Damonism](https://www.youtube.com/@Damonism), [Venario](https://www.youtube.com/@venarioo), [Malonze Gaming](https://www.youtube.com/@MalonzeGaming)
 - [Community wiki](https://project-epoch-wow.fandom.com/wiki/Project_Epoch_Wiki) – addon list, install guides, data safety notes
 
+Nothing legitimate ever needs your password but the site and the client itself, and no GM will ask for it in Fluxer or a DM.
+
 ## Tools
 
 - [EpochDB](https://epochdb.net) – Epoch database: NPCs, items, quests, loot tables, vendors, a talent calculator and raid timers, fed by its own data [addon](https://github.com/MrBoxie88/EpochDB)
@@ -139,10 +141,10 @@ The project takes volunteers, no experience with the server required to start.
 
 Found something missing or wrong here? Open a pull request or an issue.
 
-## Notes
+## Troubleshooting
 
 - Disconnects, lag or a connection that never goes through: Cloudflare WARP can sometimes improve routing, depending on your ISP and location. More in the [Connection/DC/Ping Issues?](https://project-epoch.org/forums/?topic=66) thread.
-- The project does not distribute the game client and nothing legitimate ever needs your password except the site and client; no GM will ask for it in Fluxer or a DM.
+- **`Wow.exe - Bad Image` naming `EpochConnection.dll`, error `0xc0e90002`:** Windows Smart App Control is blocking the unsigned DLL, not a corrupted client, and it happens on any client build. Turn it off under Windows Security → App & browser control → Smart App Control settings; Protection history and Event Viewer → CodeIntegrity show the block if you want to confirm it. A managed machine may be enforcing WDAC or AppLocker instead, and third-party antivirus can block it the same way, so exclude the client folder there.
+- If an addon misbehaves after a server patch, check for an Epoch build before assuming it is broken.
 - Back up your client before applying MPQ patches or injecting DLLs. The launcher re-downloads anything it manages, but it will not undo your own additions.
 - Epoch ships its own `PATCH-D` and `PATCH-M`. HD asset packs that used those letters have to be renamed, EpochAuthenticHD moved its files up a letter (D→E, E→F, F→G, M→N) for exactly this reason.
-- If an addon misbehaves after a server patch, check for an Epoch build before assuming it is broken.
