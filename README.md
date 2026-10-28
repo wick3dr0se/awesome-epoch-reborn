@@ -71,6 +71,7 @@ Most WotLK 3.3.5a addons work as-is. Addons built on static game data (quest hel
 
 ### Fine on any 3.3.5a
 
+- [WeakAuras WotLK](https://github.com/NoM0Re/WeakAuras-WotLK) – WeakAuras 5.22.1 backported to 3.3.5a and still maintained; grab `WeakAuras2.zip` from its releases and extract all seven folders into `Interface/AddOns`. It picks up the nameplate and unit APIs from Awesome WotLK.
 - [DragonUI](https://github.com/NeticSoul/DragonUI) – modular retail-style interface
 - [Auctionator 3.3.5 fixed](https://github.com/thierbig/Auctionator-3.3.5-Fixed) – auction house with a working modern sell tab
 - **ElvUI plugins:** General 3.3.5a plugins verified working with [ElvUI-Epoch](https://github.com/Bennylavaa/ElvUI-Epoch): [ProjectZidras](https://github.com/Zidras/ElvUI_ProjectZidras), [Enhanced](https://github.com/ElvUI-WotLK/ElvUI_Enhanced), [AddOnSkins](https://github.com/ElvUI-WotLK/ElvUI_AddOnSkins), [SwingBar](https://github.com/ElvUI-WotLK/ElvUI_SwingBar), [ExtraActionBars](https://github.com/ElvUI-WotLK/ElvUI_ExtraActionBars), [VisualProcs](https://github.com/ElvUI-WotLK/ElvUI_VisualProcs), [DmgAtNameplates](https://github.com/Bennylavaa/ElvUI_DmgAtNameplates)
